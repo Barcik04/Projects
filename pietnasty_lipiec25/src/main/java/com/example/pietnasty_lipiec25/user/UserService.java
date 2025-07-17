@@ -22,7 +22,10 @@ public class UserService {
     }
 
     public void deleteUser(int id) {
-        userRepository.deleteById(id);
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
+
+        userRepository.delete(user);
     }
 
     public User findUserById(int id) {

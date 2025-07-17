@@ -7,13 +7,13 @@ POST http://localhost:8080/api
 Content-Type: application/json
 
 {
-  "firstName": "Raman",
+  "firstName": "Igor",
   "age": 21
 }
 
 ###
 
-DELETE http://localhost:8080/api/2
+DELETE http://localhost:8080/api/3
 
 ###
 

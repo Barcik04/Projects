@@ -12,9 +12,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotEmpty
+    @NotEmpty(message = "must not be empty")
     private String firstName;
-    @Positive
+    @Positive(message = "age has to be above 0")
     private int age;
 
     public User(int id, String firstName, int age) {
