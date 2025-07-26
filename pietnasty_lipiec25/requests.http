@@ -1,0 +1,75 @@
+### GET request to example server
+# GET http://localhost:8080/api/users?sortBy=email&direction=desc    <--- example for custom sorting
+
+GET http://localhost:8080/api/users?sortBy=firstName
+
+###
+
+POST http://localhost:8080/api
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "age": 0,
+  "email": "igor.bb00@gmail.com"
+}
+
+###
+
+DELETE http://localhost:8080/api/41
+
+###
+
+GET http://localhost:8080/api/51
+
+
+###
+PUT http://localhost:8080/api/1
+Content-Type: application/json
+
+{
+  "firstName": "Janek",
+  "age": 21,
+  "email": "bob@gmail.com"
+}
+
+
+### POSTS
+
+GET http://localhost:8080/api/posts
+
+###
+
+PUT http://localhost:8080/api/posts/11
+Content-Type: application/json
+
+{
+  "id": 1,
+  "userId": 10,
+  "title": "Zaktualizowany tytuł",
+  "body": "Nowa zawartość posta"
+}
+
+###
+
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+
+{
+  "id": 1,
+  "userId": 10,
+  "title": "Zaktualizowany tytuł",
+  "body": "Nowa zawartość posta"
+}
+
+
+###
+
+DELETE http://localhost:8080/api/posts/12
+
+
+
+### Authorization requests
+
+GET localhost:8080/api/users
+Authorization: Basic igor password
