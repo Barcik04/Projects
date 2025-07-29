@@ -1,0 +1,151 @@
+###
+GET http://localhost:8080/students
+
+###
+
+GET localhost:8080/students/last_name/Binga
+
+###
+
+GET localhost:8080/students/show-books-by-student-id/1
+
+###
+
+GET localhost:8080/students/by-last-name?lastName=Barcik
+
+###
+
+GET localhost:8080/students/sort?direction=desc
+
+###
+###       EXAMPLES FOR PAGING
+###GET /students/page?page=1&size=7
+###GET /students/page?sort=email,desc
+###GET /students/page?sort=firstName,asc&sort=age,desc
+
+GET localhost:8080/students/page?page=1&size=99,sort=age
+
+###
+
+GET localhost:8080/students/count?age=21
+
+###
+
+
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "email": "11.aaw1baab0@l.com",
+  "age": 82,
+  "firstName": "12223",
+  "lastName": "I11g1"
+}
+
+
+
+###
+
+DELETE localhost:8080/students/9
+Content-Type: application/json
+
+###
+DELETE localhost:8080/students/by-age?age=12
+
+###
+
+PUT localhost:8080/students/1
+Content-Type: application/json
+
+{
+  "email": "11.baaaaaaaaaaaab0@l.com",
+  "age": 82,
+  "firstName": "12223",
+  "lastName": "Igoraao"
+}
+
+
+###
+
+GET localhost:8080/student-id-card
+
+###
+
+POST http://localhost:8080/student-id-card
+Content-Type: application/json
+
+{
+  "cardNumber": "CARD-001",
+  "student": {
+    "id": 1
+  }
+}
+
+
+###
+
+GET localhost:8080/books
+
+###
+
+PUT localhost:8080/students/add-book/1/2
+
+###
+
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "bookName": "Hobabita"
+}
+
+
+###
+
+GET localhost:8080/books/find-student-by-book/Hobbit
+
+
+###
+
+GET localhost:8080/books
+
+
+###
+GET localhost:8080/courses
+
+###
+
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+{
+  "courseName": "Bailaq",
+  "department": "Mathematics"
+}
+
+###
+
+GET localhost:8080/courses/get_course_with_students/1
+
+
+###
+
+POST localhost:8080/enrollments
+Content-Type: application/json
+
+{
+  "student": {
+    "id": 1
+  },
+  "course": {
+    "id": 1
+  },
+  "courseEnrollmentId": {
+    "courseId": 1,
+    "studentId": 1
+  }
+}
+
+
+###
+GET localhost:8080/enrollments
