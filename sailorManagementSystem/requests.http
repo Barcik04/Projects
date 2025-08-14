@@ -1,0 +1,46 @@
+### GET request to example server
+GET localhost:8080/sailors
+
+###
+
+POST localhost:8080/sailors
+Content-Type: application/json
+
+{
+  "firstName": "Igor",
+  "lastName": "Barc",
+  "email": "Igor.bb00@gmail.com",
+  "dateOfBirth": "1974-12-02",
+  "password": "12312"
+}
+
+###
+
+GET localhost:8080/clubs
+
+###
+
+POST localhost:8080/clubs
+Content-Type: application/json
+
+{
+  "name": "AZS",
+  "location": "Olsztyn"
+}
+
+###
+
+PUT localhost:8080/clubs/1/1
+
+###
+
+DELETE localhost:8080/clubs/remove-sailor/-1/1
+
+###
+
+DELETE localhost:8080/clubs/delete-club/-1
+
+
+
+###
+GET  localhost:8080/clubs/get-by-name/AZS
